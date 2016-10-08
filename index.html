@@ -40,6 +40,7 @@
         <button>猜测</button>
         <h4 id = "answer">答案：纽约</h4>
     </div>
+    <script type="text/javascript" src="data.js"></script>
     <script src="https://d3js.org/d3.v3.min.js" charset="utf-8"></script>  
     <script async defer
     src="http://maps.google.cn/maps/api/js?key=AIzaSyA45LzBbY9d795itYwSzjvnOWEGdlzvJmA&signed_in=true&callback=initMap">
@@ -52,10 +53,7 @@
           mapTypeId: google.maps.MapTypeId.SATELLITE
         });
       }
-     var cities = [
-        {"name": "南通", "lat":31.976781,"lng":120.9682908 },
-        {"name": "苏州", "lat":31.366162,"lng":120.5816724 }
-    ]; 
+    var cities = data;
     
     function randomciti(){
         return cities[Math.floor(Math.random() * cities.length)]
